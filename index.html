@@ -8,7 +8,111 @@
     <title>Advents-Challenge</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="header_app">
+            <img src="./img/icons8-weihnachten-96.png" alt="Santas Elf">
+            <span>Wunschzettel</span>
+        </div>
+        <div class="add_person_button add_button">
+            <span>+</span>
+            <img src="./img/icons8-person-48 (1).png" alt="Icon Person">
+        </div>
+        <div class="form_ctn_person">
+            <form onsubmit="" action="">
+                <div class="form_header">
+                    <span>Santa's New Customer</span>
+                    <div id="button_form_close" class="button_form button_close_form_person">
+                        <img class="" src="./img/icons8-löschen-50 (1).png" alt="Icon X">
+                    </div>
+                </div>
+             
+                <div class="field_ctn field_ctn_name">
+                    <label for="customer_name_input">Name</label>
+                    <div class="field_input">
+                        <input type="text" id="customer_name_input">
+                        <span class="error_message_input">Nicht korrekt</span>
+                    </div>
+                </div>
+                <div class="field_ctn field_ctn_age">
+                    <label for="customer_age_input">Alter</label>
+                    <div class="field_input">
+                        <input type="number" name="age" id="customer_age_input">
+                        <span class="error_message_input">Nicht korrekt</span>
+                    </div>
+                </div>
+                <div class="fields_ctn_adress">
+
+                    <div class="field_ctn field_ctn_street">
+                        <label for="customer_street_input">Straße</label>
+                        <div class="field_input">
+                            <input type="text" name="street" id="customer_street_input">
+                            <span class="error_message_input">Nicht korrekt</span>
+                        </div>
+                    </div>
+                
+                    <div class="field_ctn field_ctn_StreetNo">
+                        <label for="customer_streetNo_input">Hausnummer</label>
+                        <div class="field_input">
+                            <input type="number" name="street" id="customer_street_input">
+                            <span class="error_message_input">Nicht korrekt</span>
+                        </div>
+                    </div>
+                    <div class="field_ctn field_ctn_areaCode">
+                        <label for="customer_areaCode_input">PLZ</label>
+                        <div class="field_input">
+                            <input type="number" name="areaCode" id="customer_areaCode_input">
+                            <span class="error_message_input">Nicht korrekt</span>
+                        </div>
+                    </div>
+                    <div class="field_ctn field_ctn_city">
+                        <label for="customer_city_input">Ort</label>
+                        <div class="field_input">
+                            <input type="number" name="city" id="customer_city_input">
+                            <span class="error_message_input">Nicht korrekt</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons_form_bottom">
+                    <div class="button_form" id="button_form_clear">
+                        <img src="./img/icons8-fegen-50 (1).png" alt="Icon Besen">
+                    </div>
+                    <button class="button_form" id="button_form_save" type="submit">
+                        <img src="./img/icons8-speichern-50 (1).png" alt="Icon Diskette">
+                    </button>
+                </div>
+              
+            </form>
+        </div>
+        <div class="list_of_customer">
+            <div class="customer_data">
+                <div class="customer_contact">
+                    <div class="customer_name_info">
+                        Sabrina Fritz
+                    </div>
+                    <div class="customer_age_info">
+                        36
+                    </div>
+                    <div class="customer_adress_info">
+                        August-Hund-Str. 13
+                        77656 Offenburg
+                    </div>
+                </div>
+                <div class="customer_whishes">
+                    <ul>
+                        <li>Urlaub</li>
+                        <li>Buch</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="add_wish_button add_button">
+            <span>+</span>
+            <img src="./img/icons8-geschenk-64.png" alt="Icon Geschenk">
+        </div>
+        <div class="form_ctn_whish">
+
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
