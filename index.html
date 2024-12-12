@@ -5,19 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/icons8-weihnachten-16.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fonts.css">
     <title>Advents-Challenge</title>
 </head>
 <body>
+    <header class="header_app">
+        <div class="header_content">
+            <img class="logo_elf" src="./img/icons8-weihnachten-96.png" alt="Santas Elf">
+            <span class="header_title">WISHLIST</span>
+            <div class="add_person_button add_button">
+                <span>+</span>
+                <img src="./img/icons8-person-48 (1).png" alt="Icon Person">
+            </div>
+        </div>
+    </header>
     <div class="container">
-        <div class="header_app">
-            <img src="./img/icons8-weihnachten-96.png" alt="Santas Elf">
-            <span>Wunschzettel</span>
-        </div>
-        <div class="add_person_button add_button">
-            <span>+</span>
-            <img src="./img/icons8-person-48 (1).png" alt="Icon Person">
-        </div>
         <div class="form_ctn_person">
+            <img class="snowflake" id="snowflake_0" src="./img/icons8-schneeflocke-100.png" alt="Schneeflocke">
+            <img class="snowflake" id="snowflake_1" src="./img/icons8-schneeflocke-100.png" alt="Schneeflocke">
+            <img class="snowflake" id="snowflake_2" src="./img/icons8-schneeflocke-100.png" alt="Schneeflocke">
+            <img class="snowflake" id="snowflake_3" src="./img/icons8-schneeflocke-100.png" alt="Schneeflocke">
+            <img class="snowflake" id="snowflake_4" src="./img/icons8-schneeflocke-100.png" alt="Schneeflocke">
+            <img class="snowflake" id="snowflake_5" src="./img/icons8-schneeflocke-100.png" alt="Schneeflocke">
             <form onsubmit="" action="">
                 <div class="form_header">
                     <span>Santa's New Customer</span>
@@ -25,52 +34,52 @@
                         <img class="" src="./img/icons8-löschen-50 (1).png" alt="Icon X">
                     </div>
                 </div>
-             
-                <div class="field_ctn field_ctn_name">
-                    <label for="customer_name_input">Name</label>
-                    <div class="field_input">
-                        <input type="text" id="customer_name_input">
-                        <span class="error_message_input">Nicht korrekt</span>
+                <div class="form_input_content">
+                    <div class="field_ctn field_ctn_name">
+                        <label for="customer_name_input">Name</label>
+                        <div class="field_input">
+                            <input type="text" id="customer_name_input">
+                            <span class="error_message_input">Nicht korrekt</span>
+                        </div>
                     </div>
-                </div>
-                <div class="field_ctn field_ctn_age">
-                    <label for="customer_age_input">Alter</label>
-                    <div class="field_input">
-                        <input type="number" name="age" id="customer_age_input">
-                        <span class="error_message_input">Nicht korrekt</span>
+                    <div class="field_ctn field_ctn_age">
+                        <label for="customer_age_input">Alter</label>
+                        <div class="field_input">
+                            <input type="number" name="age" id="customer_age_input">
+                            <span class="error_message_input">Nicht korrekt</span>
+                        </div>
                     </div>
+                    <div class="fields_ctn_adress">
+                        <div class="field_ctn field_ctn_street">
+                            <label for="customer_street_input">Straße</label>
+                            <div class="field_input">
+                                <input type="text" name="street" id="customer_street_input">
+                                <span class="error_message_input">Nicht korrekt</span>
+                            </div>
+                        </div>
+                        <div class="field_ctn field_ctn_StreetNo">
+                            <label for="customer_streetNo_input">Hausnummer</label>
+                            <div class="field_input">
+                                <input type="number" name="street" id="customer_street_input">
+                                <span class="error_message_input">Nicht korrekt</span>
+                            </div>
+                        </div>
+                        <div class="field_ctn field_ctn_areaCode">
+                            <label for="customer_areaCode_input">PLZ</label>
+                            <div class="field_input">
+                                <input type="number" name="areaCode" id="customer_areaCode_input">
+                                <span class="error_message_input">Nicht korrekt</span>
+                            </div>
+                        </div>
+                        <div class="field_ctn field_ctn_city">
+                            <label for="customer_city_input">Ort</label>
+                            <div class="field_input">
+                                <input type="number" name="city" id="customer_city_input">
+                                <span class="error_message_input">Nicht korrekt</span>
+                            </div>
+                        </div>
                 </div>
-                <div class="fields_ctn_adress">
 
-                    <div class="field_ctn field_ctn_street">
-                        <label for="customer_street_input">Straße</label>
-                        <div class="field_input">
-                            <input type="text" name="street" id="customer_street_input">
-                            <span class="error_message_input">Nicht korrekt</span>
-                        </div>
-                    </div>
-                
-                    <div class="field_ctn field_ctn_StreetNo">
-                        <label for="customer_streetNo_input">Hausnummer</label>
-                        <div class="field_input">
-                            <input type="number" name="street" id="customer_street_input">
-                            <span class="error_message_input">Nicht korrekt</span>
-                        </div>
-                    </div>
-                    <div class="field_ctn field_ctn_areaCode">
-                        <label for="customer_areaCode_input">PLZ</label>
-                        <div class="field_input">
-                            <input type="number" name="areaCode" id="customer_areaCode_input">
-                            <span class="error_message_input">Nicht korrekt</span>
-                        </div>
-                    </div>
-                    <div class="field_ctn field_ctn_city">
-                        <label for="customer_city_input">Ort</label>
-                        <div class="field_input">
-                            <input type="number" name="city" id="customer_city_input">
-                            <span class="error_message_input">Nicht korrekt</span>
-                        </div>
-                    </div>
                 </div>
                 <div class="buttons_form_bottom">
                     <div class="button_form" id="button_form_clear">
@@ -86,30 +95,212 @@
         <div class="list_of_customer">
             <div class="customer_data">
                 <div class="customer_contact">
-                    <div class="customer_name_info">
-                        Sabrina Fritz
+                    <div class="customer_contact_ctn">
+                        <div class="customer_name_age_info_ctn">
+                            <span class="customer_name_info">Sabrina Fritz, </span>
+                            <span class="customer_age_info">36 Jahre alt</span>
+                        </div>
+                        <div class="customer_adress_info">
+                            August-Hund-Str. 13 <br>
+                            77656 Offenburg
+                        </div>
                     </div>
-                    <div class="customer_age_info">
-                        36
+                    <div class="button_line">
+                        <div onclick="event.stopPropagation()" id="show_more${transactionsToShow[i].showMoreID}" class="more_menu">
+                            <div onclick="event.stopPropagation(); editTransaction(transactionToEdit)" class="edit_button button">
+                                <img onclick="event.stopPropagation(); editTransaction(transactionToEdit)" src="./img/icons8-bleistift-64.png" alt="Bleistift">
+                            </div>
+                            <div onclick="event.stopPropagation(); deleteTransaction(idToWork)" class="delete_button button">
+                                <img onclick="event.stopPropagation(); deleteTransaction(idToWork)" src="./img/icons8-müll-64.png" alt="Mülleimer">
+                            </div>
+                            <div onclick="event.stopPropagation(); closeMenuMore(id)" class="close_menu_button button">
+                                <img onclick="event.stopPropagation(); closeMenuMore(id)" src="./img/icons8-ausgang-80.png" alt="Ausgang">
+                            </div>
+                        </div>
+                        <div onclick="event.stopPropagation(); openMenuMore(id, event)" class="edit_button button">
+                            <span onclick="event.stopPropagation(); openMenuMore(id, event)" id="show_more_btn${transactionsToShow[i].showMoreID}" class="show_more_button">&#x22EF;</span>
+                        </div>
+                        <div class="add_wish_button button">
+                            <img src="./img/icons8-geschenk-64 (1).png" alt="Icon Geschenk">
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="customer_wishes">
+                    <ul class="wish_list">
+                        <li class="wish_ctn">
+                            <div class="wish_checkbox">
+                                <img class="wish_checkbox_img wish_checkbox_not_checked" src="./img/icons8-christmas-ball-sw (2).png" alt="Checkbox nicht gecheckt">
+                                <img class="wish_checkbox_img wish_checkbox_checked" src="./img/icons8-christmas-ball-color.png" alt="Checkbox gechecked">
+                            </div>
+                            <span class="wish_title">Urlaub</span>
+                            <div class="button_line">
+                                <div onclick="event.stopPropagation()" id="show_more${transactionsToShow[i].showMoreID}" class="more_menu">
+                                    <div onclick="event.stopPropagation(); editTransaction(transactionToEdit)" class="edit_button button">
+                                        <img onclick="event.stopPropagation(); editTransaction(transactionToEdit)" src="./img/icons8-bleistift-64.png" alt="Bleistift">
+                                    </div>
+                                    <div onclick="event.stopPropagation(); deleteTransaction(idToWork)" class="delete_button button">
+                                        <img onclick="event.stopPropagation(); deleteTransaction(idToWork)" src="./img/icons8-müll-64.png" alt="Mülleimer">
+                                    </div>
+                                    <div onclick="event.stopPropagation(); closeMenuMore(id)" class="close_menu_button button">
+                                        <img onclick="event.stopPropagation(); closeMenuMore(id)" src="./img/icons8-ausgang-80.png" alt="Ausgang">
+                                    </div>
+                                </div>
+                                <div onclick="event.stopPropagation(); openMenuMore(id, event)" class="edit_button button">
+                                    <span onclick="event.stopPropagation(); openMenuMore(id, event)" id="show_more_btn${transactionsToShow[i].showMoreID}" class="show_more_button">&#x22EF;</span>
+                                </div>
+                            </div>
+                          
+                        </li>
+                        <li class="wish_ctn">
+                            <div class="wish_checkbox">
+                                <img class="wish_checkbox_img wish_checkbox_not_checked" src="./img/icons8-christmas-ball-sw (2).png" alt="Checkbox nicht gecheckt">
+                                <img class="wish_checkbox_img wish_checkbox_checked" src="./img/icons8-christmas-ball-color.png" alt="Checkbox gechecked">
+                            </div>
+                            <span class="wish_title">Urlaub</span>
+                            <div class="button_line">
+                                <div onclick="event.stopPropagation()" id="show_more${transactionsToShow[i].showMoreID}" class="more_menu">
+                                    <div onclick="event.stopPropagation(); editTransaction(transactionToEdit)" class="edit_button button">
+                                        <img onclick="event.stopPropagation(); editTransaction(transactionToEdit)" src="./img/icons8-bleistift-64.png" alt="Bleistift">
+                                    </div>
+                                    <div onclick="event.stopPropagation(); deleteTransaction(idToWork)" class="delete_button button">
+                                        <img onclick="event.stopPropagation(); deleteTransaction(idToWork)" src="./img/icons8-müll-64.png" alt="Mülleimer">
+                                    </div>
+                                    <div onclick="event.stopPropagation(); closeMenuMore(id)" class="close_menu_button button">
+                                        <img onclick="event.stopPropagation(); closeMenuMore(id)" src="./img/icons8-ausgang-80.png" alt="Ausgang">
+                                    </div>
+                                </div>
+                                <div onclick="event.stopPropagation(); openMenuMore(id, event)" class="edit_button button">
+                                    <span onclick="event.stopPropagation(); openMenuMore(id, event)" id="show_more_btn${transactionsToShow[i].showMoreID}" class="show_more_button">&#x22EF;</span>
+                                </div>
+                            </div>
+                          
+                        </li>
+                        <li class="wish_ctn">
+                            <div class="wish_checkbox">
+                                <img class="wish_checkbox_img wish_checkbox_not_checked" src="./img/icons8-christmas-ball-sw (2).png" alt="Checkbox nicht gecheckt">
+                                <img class="wish_checkbox_img wish_checkbox_checked" src="./img/icons8-christmas-ball-color.png" alt="Checkbox gechecked">
+                            </div>
+                            <span class="wish_title">Urlaub</span>
+                            <div class="button_line">
+                                <div onclick="event.stopPropagation()" id="show_more${transactionsToShow[i].showMoreID}" class="more_menu">
+                                    <div onclick="event.stopPropagation(); editTransaction(transactionToEdit)" class="edit_button button">
+                                        <img onclick="event.stopPropagation(); editTransaction(transactionToEdit)" src="./img/icons8-bleistift-64.png" alt="Bleistift">
+                                    </div>
+                                    <div onclick="event.stopPropagation(); deleteTransaction(idToWork)" class="delete_button button">
+                                        <img onclick="event.stopPropagation(); deleteTransaction(idToWork)" src="./img/icons8-müll-64.png" alt="Mülleimer">
+                                    </div>
+                                    <div onclick="event.stopPropagation(); closeMenuMore(id)" class="close_menu_button button">
+                                        <img onclick="event.stopPropagation(); closeMenuMore(id)" src="./img/icons8-ausgang-80.png" alt="Ausgang">
+                                    </div>
+                                </div>
+                                <div onclick="event.stopPropagation(); openMenuMore(id, event)" class="edit_button button">
+                                    <span onclick="event.stopPropagation(); openMenuMore(id, event)" id="show_more_btn${transactionsToShow[i].showMoreID}" class="show_more_button">&#x22EF;</span>
+                                </div>
+                            </div>
+                          
+                        </li>
+                        <li class="wish_ctn">
+                            <div class="wish_checkbox">
+                                <img class="wish_checkbox_img wish_checkbox_not_checked" src="./img/icons8-christmas-ball-sw (2).png" alt="Checkbox nicht gecheckt">
+                                <img class="wish_checkbox_img wish_checkbox_checked" src="./img/icons8-christmas-ball-color.png" alt="Checkbox gechecked">
+                            </div>
+                            <span class="wish_title">Urlaub</span>
+                            <div class="button_line">
+                                <div onclick="event.stopPropagation()" id="show_more${transactionsToShow[i].showMoreID}" class="more_menu">
+                                    <div onclick="event.stopPropagation(); editTransaction(transactionToEdit)" class="edit_button button">
+                                        <img onclick="event.stopPropagation(); editTransaction(transactionToEdit)" src="./img/icons8-bleistift-64.png" alt="Bleistift">
+                                    </div>
+                                    <div onclick="event.stopPropagation(); deleteTransaction(idToWork)" class="delete_button button">
+                                        <img onclick="event.stopPropagation(); deleteTransaction(idToWork)" src="./img/icons8-müll-64.png" alt="Mülleimer">
+                                    </div>
+                                    <div onclick="event.stopPropagation(); closeMenuMore(id)" class="close_menu_button button">
+                                        <img onclick="event.stopPropagation(); closeMenuMore(id)" src="./img/icons8-ausgang-80.png" alt="Ausgang">
+                                    </div>
+                                </div>
+                                <div onclick="event.stopPropagation(); openMenuMore(id, event)" class="edit_button button">
+                                    <span onclick="event.stopPropagation(); openMenuMore(id, event)" id="show_more_btn${transactionsToShow[i].showMoreID}" class="show_more_button">&#x22EF;</span>
+                                </div>
+                            </div>
+                          
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="customer_data">
+                <div class="customer_contact">
+                    <div class="customer_name_age_info_ctn">
+                        <span class="customer_name_info">Sabrina Fritz, </span>
+                        <span class="customer_age_info">36 Jahre alt</span>
                     </div>
                     <div class="customer_adress_info">
-                        August-Hund-Str. 13
+                        August-Hund-Str. 13 <br>
                         77656 Offenburg
                     </div>
+                    <div class="add_wish_button add_button">
+                        <span>+</span>
+                        <img src="./img/icons8-geschenk-64.png" alt="Icon Geschenk">
+                    </div>
                 </div>
-                <div class="customer_whishes">
+                <div class="customer_wishes">
                     <ul>
                         <li>Urlaub</li>
+                        <li>Buch</li>
+                        <li>Buch</li>
+                        <li>Buch</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="customer_data">
+                <div class="customer_contact">
+                    <div class="customer_name_age_info_ctn">
+                        <span class="customer_name_info">Sabrina Fritz, </span>
+                        <span class="customer_age_info">36 Jahre alt</span>
+                    </div>
+                    <div class="customer_adress_info">
+                        August-Hund-Str. 13 <br>
+                        77656 Offenburg
+                    </div>
+                    <div class="add_wish_button add_button">
+                        <span>+</span>
+                        <img src="./img/icons8-geschenk-64.png" alt="Icon Geschenk">
+                    </div>
+                </div>
+                <div class="customer_wishes">
+                    <ul>
+                        <li>Urlaub</li>
+                        <li>Buch</li>
+                        <li>Buch</li>
+                        <li>Buch</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="customer_data">
+                <div class="customer_contact">
+                    <div class="customer_name_age_info_ctn">
+                        <span class="customer_name_info">Sabrina Fritz, </span>
+                        <span class="customer_age_info">36 Jahre alt</span>
+                    </div>
+                    <div class="customer_adress_info">
+                        August-Hund-Str. 13 <br>
+                        77656 Offenburg
+                    </div>
+                    <div class="add_wish_button add_button">
+                        <span>+</span>
+                        <img src="./img/icons8-geschenk-64.png" alt="Icon Geschenk">
+                    </div>
+                </div>
+                <div class="customer_wishes">
+                    <ul>
+                        <li>Urlaub</li>
+                        <li>Buch</li>
+                        <li>Buch</li>
                         <li>Buch</li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="add_wish_button add_button">
-            <span>+</span>
-            <img src="./img/icons8-geschenk-64.png" alt="Icon Geschenk">
-        </div>
-        <div class="form_ctn_whish">
+        <div class="form_ctn_wish">
 
         </div>
     </div>
