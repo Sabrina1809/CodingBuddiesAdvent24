@@ -30,6 +30,7 @@ body {
     font-family: 'Urbanist', sans-serif;
     display: flex;
     justify-content: center;
+    min-width: 320px;
 }
 .add_button {
     width: 60px;
@@ -77,7 +78,7 @@ body {
     overflow: visible;
     & .header_content {
         position: relative;
-        width: 100%;
+        width: 90%;
         max-width: 700px;
         margin: 0 auto;
         display: flex;
@@ -97,8 +98,6 @@ body {
             justify-content: center;
             align-items: center;
         }
-        & .add_person_button {
-        } 
     }
 }
 .container {
@@ -121,13 +120,15 @@ body {
         background-color: rgba(0,0,0, 0.75);
         width: 100%;
         top: 0;
-        bottom: 0;
+        bottom: 100%;
         margin:0 auto;
         z-index: 20;
+        transition: all 0.5s ease-in-out;
         & .snowflake {
             position: absolute;
             left: 0;
             z-index: 20;
+            display: none;
         }
         & #snowflake_0 {
             top: 10px;
@@ -179,7 +180,7 @@ body {
         }
         & form {
             background-color: rgb(171, 190, 153);
-            box-shadow: 0 0 15px rgba(0,0,0, 0.5);
+            box-shadow: 0 0 15px rgba(255,255,255, 0.5);
             margin: 0 auto;
             padding: 20px 30px;
             width: 80%;
@@ -190,6 +191,7 @@ body {
             border-radius: 10px;
             position: relative;
             z-index: 21;
+            display: none;
             & .form_header {
                 font-family: 'Fredericka the Great';
                 font-size: 32px;
@@ -197,9 +199,9 @@ body {
                 height: 40px;
                 display: flex;
                 justify-content: space-between;
-                align-items: start;
+                align-items: center;
                 & span {
-                    font-size: 20px;
+                    font-size: 26px;
                     color: whitesmoke;
                 }
             }
@@ -277,6 +279,7 @@ body {
                     & .error_message_input {
                         font-size: 14px;
                         color: brown;
+                        visibility: hidden;
                     }
                 }
             }
@@ -287,10 +290,10 @@ body {
         position: absolute;
         left: 0;
         right: 0;
-        margin-right: 10px;
         bottom: 10px;
         overflow: auto;
         & .customer_data {
+            height: 130px;
             background-color: white;
             width: 80%;
             margin: 0px auto 10px auto;
@@ -331,7 +334,7 @@ body {
                 }
                 
                 & .more_menu{
-                    display: flex;
+                    display: none;
                     /* border: 1px solid lightcoral; */
                 }
                
@@ -352,8 +355,36 @@ body {
                         margin-bottom: 8px;
                     }
                 }
-                
-              
+                & .add_wish_button_ctn {
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    & .add_wish_button {
+                        width: 30px;
+                    aspect-ratio: 1 / 1;
+                    display: flex
+;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0px 5px;
+                    /* border: 1px solid black; */
+                    border-radius: 5px;
+                    z-index: 10;
+                    background-color: white;
+                        & img {
+                            width: 25px;
+                            aspect-ratio: 1/1;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            box-shadow: 0 0 2px black;
+                        }
+                        &:active {
+                            box-shadow: 0 0 2px black inset;
+                        }
+                    }
+                 
+                }
             }
             & .customer_wishes {
                 /* border: 1px solid blueviolet; */
@@ -395,7 +426,7 @@ body {
                         }
                         & .wish_title {
                             position: absolute;
-                            width: 175px;
+                            width: 173px;
                             max-height: 36px;
                             overflow-y: auto;
                             left: 40px;
@@ -404,6 +435,65 @@ body {
                             background-color: rgba(255, 255, 255, 0.75);
                             z-index: 10;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 700px) {
+    .container {
+        & .list_of_customer {
+            & .customer_data {
+                height: unset;
+                flex-direction: column;
+                & .customer_contact {
+                    position: relative;
+                    width: unset;
+                    border-right: unset;
+                    border-bottom: 1px solid black;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    & .add_wish_button_ctn {
+                        position: absolute;
+                        right: 28px;
+                    }
+                    & .button_line {
+                        position: absolute;
+                        right: 28px;
+                        top: 37px;
+                    }
+                }
+                & .customer_wishes {
+                    width: unset;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 450px) {
+    .container {
+        & .form_ctn_person {
+            & form {
+                padding: 20px;
+                width: 82%;
+                & .form_header {
+                    & span {
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+        & .list_of_customer {
+            & .customer_data {
+                & .customer_contact {
+                    & .add_wish_button_ctn {
+                        right: 0px;
+                    }
+                    & .button_line {
+                        right: 0px;
                     }
                 }
             }
