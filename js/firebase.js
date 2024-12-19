@@ -1,5 +1,6 @@
 const firebase_URL = 'https://advents-challenge-default-rtdb.europe-west1.firebasedatabase.app/';
 let dataBase = {};
+let customerArray = [];
 
 async function getIdAndCustomer(pathData='') {
     let responseData = await fetch(firebase_URL + pathData + ".json");
@@ -8,7 +9,11 @@ async function getIdAndCustomer(pathData='') {
     customerID = responseDataToJson.customerID;
     // keyForAllTasks();
     dataBase =  {customerID, allCustomer};
-    console.log(dataBase);
+    // console.log(dataBase);
+    customerArray = Object.values(dataBase.allCustomer);
+    // console.log(customerArray);
+    
+    renderCustomer(dataBase, customerArray)
     return dataBase
 }
 

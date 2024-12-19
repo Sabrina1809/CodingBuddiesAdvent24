@@ -7,6 +7,8 @@ let inputFields = [
     'customer_city_input',
 ]
 
+let snowflakes = document.querySelectorAll(".form_ctn_person > img");
+
 function openNewCustomerForm() {
     document.querySelector(".form_ctn_person").style.bottom = "0"; 
     snowflakes.forEach(snowflake => {
@@ -220,12 +222,10 @@ async function collectData(inputError) {
         'city' : `${document.getElementById('customer_city_input').value.trim()}`,
         'wishes' : {}
     }
-    console.log(newCustomer);
-    await postNewCustomer(path="allCustomer", data=newCustomer);
+    let customerPath = `allCustomer/${dataBase.customerID}`
+    await postNewCustomer(path="allCustomer", newCustomer);
     dataBase.customerID++;
-    console.log(dataBase.customerID);
-    await putNewCustomerID(path="customerID", data=dataBase.customerID);
+    await putNewCustomerID(path="customerID", dataBase.customerID);
     await getIdAndCustomer(pathData='');
-    console.log(dataBase);
-    
+    closeNewCustomerForm();
 }

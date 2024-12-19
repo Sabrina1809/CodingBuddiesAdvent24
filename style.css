@@ -446,22 +446,22 @@ body {
     .container {
         & .list_of_customer {
             & .customer_data {
-                height: unset;
+                max-height: 215px;
                 flex-direction: column;
                 & .customer_contact {
                     position: relative;
-                    width: unset;
+                    width: 95%;
                     border-right: unset;
                     border-bottom: 1px solid black;
                     padding-bottom: 10px;
                     margin-bottom: 10px;
                     & .add_wish_button_ctn {
                         position: absolute;
-                        right: 28px;
+                        right: 6px;
                     }
                     & .button_line {
                         position: absolute;
-                        right: 28px;
+                        right: 6px;
                         top: 37px;
                     }
                 }
