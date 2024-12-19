@@ -15,10 +15,53 @@ function openNewCustomerForm() {
         snowflake.style.display = "block";
     })
     document.querySelector("#addCustomerForm").style.display = "block"; 
-    clearNewCustomerForm()
+    clearCustomerForm();
+    prepareFormToAdd();
 }
 
-function clearNewCustomerForm() {
+function openEditCustomerForm(i, key) {
+    document.querySelector(".form_ctn_person").style.bottom = "0"; 
+    snowflakes.forEach(snowflake => {
+        snowflake.style.display = "block";
+    })
+    document.querySelector("#addCustomerForm").style.display = "block"; 
+    clearCustomerForm();
+    prepareFormToEdit(i, key);
+    addInputValues(i, key, customerArray);
+}
+
+function prepareFormToEdit(i, key) {
+    document.querySelector(".form_header span").innerHTML = `Edit Santa's Customer`;
+    document.querySelector("#change_button_ctn").innerHTML = ``;
+    document.querySelector("#change_button_ctn").innerHTML = ` 
+        <button onclick="checkFormInput('${i}', '${key}')" class="button_form" id="button_form_save" type="submit">
+        <img src="./img/icons8-speichern-50 (1).png" alt="Icon Diskette">
+        </button>
+    `;
+    document.getElementById('customer_name_input').disabled = true;
+}
+
+function prepareFormToAdd(i, key) {
+    document.querySelector(".form_header span").innerHTML = `Santa's New Customer`;
+    document.querySelector("#change_button_ctn").innerHTML = ``;
+    document.querySelector("#change_button_ctn").innerHTML = ` 
+        <button onclick="checkFormInput('${i}', '${key}')" class="button_form" id="button_form_save" type="submit">
+        <img src="./img/icons8-speichern-50 (1).png" alt="Icon Diskette">
+        </button>
+    `;
+    document.getElementById('customer_name_input').disabled = false;
+}
+
+function addInputValues(i, key, customerArray) {
+    document.getElementById('customer_name_input').value = `${customerArray[i].name}`;
+    document.getElementById('customer_age_input').value = `${customerArray[i].age}`;
+    document.getElementById('customer_street_input').value = `${customerArray[i].street}`;
+    document.getElementById('customer_streetNo_input').value = `${customerArray[i].streetNo}`;
+    document.getElementById('customer_areaCode_input').value = `${customerArray[i].areaCode}`;
+    document.getElementById('customer_city_input').value = `${customerArray[i].city}`;
+}
+
+function clearCustomerForm() {
     clearErrorMessages();
     clearInputFields();
 }
@@ -181,7 +224,6 @@ function checkInputAreaCode(inputError) {
     inputError = inputError;
     checkInputCity(inputError);
 }
-
 
 function checkInputCity(inputError) {
     let inputElement = document.getElementById('customer_city_input');

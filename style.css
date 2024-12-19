@@ -305,6 +305,7 @@ body {
             gap: 2.5%;
             justify-content: center;
             align-items: top;
+            position: relative;
             & .button_line {
                 border-radius: 5px;
                 display: flex;
@@ -441,8 +442,95 @@ body {
         }
     }
 }
+.form_ctn_wish {
+    display: none;
+    width: 47%;
+    height: 130px;
+    position: absolute;
+    top: 21px;
+    right: 50%;
+    z-index: 20;
+    background-color: rgb(171, 190, 153);
+    /* display: flex; */
+    flex-direction: column;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    & input {
+        width: 90%;
+        height: 40%;
+        margin: 10px auto 5px auto;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        outline: none;
+        padding-top: 0;
+        padding-left: 10px;
+        color: gray;
+        font-size: 16px;
+        &:focus {
+            border: 1px solid gray;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5) inset;
+        }
+       
+    }
+    & #customer_wish_input_error {
+        margin-left: 4%;
+        color: brown;
+        visibility: hidden;
+    }
+    & .buttons_form_bottom {
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+        margin-right: 3%;
+        & .button_form {
+            height: 35px;
+            width: 35px;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            /* position: absolute; */
+            right: 0;
+            & img {
+                width: 25px;
+                height: 25px;
+
+            }
+            &:hover {
+                cursor: pointer;
+                border: 1px solid rgba(245, 245, 245, 0.463);
+                background-color: rgba(0,0,0,0.1);
+            }
+        }
+    }
+}
 
 @media(max-width: 700px) {
+    .form_ctn_wish {
+        display: none;
+        width: 91%;
+        height: 78px;
+        position: absolute;
+        top: 13px;
+        right: 5.5%;
+        z-index: 20;
+        background-color: rgb(171, 190, 153);
+        /* display: flex; */
+        flex-direction: column;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 0px;
+        & .buttons_form_bottom {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            gap: 7px;
+          
+        }
+    }
     .container {
         & .list_of_customer {
             & .customer_data {
@@ -461,7 +549,7 @@ body {
                     }
                     & .button_line {
                         position: absolute;
-                        right: 6px;
+                        right: 9px;
                         top: 37px;
                     }
                 }

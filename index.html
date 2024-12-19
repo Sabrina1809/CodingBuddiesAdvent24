@@ -82,18 +82,21 @@
 
                 </div>
                 <div class="buttons_form_bottom">
-                    <div onclick="clearNewCustomerForm()" class="button_form" id="button_form_clear">
+                    <div onclick="clearCustomerForm()" class="button_form" id="button_form_clear">
                         <img src="./img/icons8-fegen-50 (1).png" alt="Icon Besen">
                     </div>
-                    <button onclick="checkFormInput()" class="button_form" id="button_form_save" type="submit">
-                        <img src="./img/icons8-speichern-50 (1).png" alt="Icon Diskette">
-                    </button>
+                    <div id="change_button_ctn">
+                        <button onclick="checkFormInput()" class="button_form" id="button_form_save" type="submit">
+                            <img src="./img/icons8-speichern-50 (1).png" alt="Icon Diskette">
+                        </button>
+                    </div>
+                   
                 </div>
               
             </form>
         </div>
         <div class="list_of_customer">
-            <div class="customer_data">
+            <!-- <div class="customer_data">
                 <div class="customer_contact">
                     <div class="customer_contact_ctn">
                         <div class="customer_name_age_info_ctn">
@@ -316,15 +319,14 @@
                     </ul>
                     
                 </div>
-            </div>
-        </div>
-        <div class="form_ctn_wish">
-
+            </div> -->
+            <input type="text">
         </div>
     </div>
     <script src="./js/firebase.js"></script>
     <script src="script.js"></script>
     <script src="./js/customer_form.js"></script>
+    <script src="./js/add_wish.js"></script>
   
 </body>
 </html>
