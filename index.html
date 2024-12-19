@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./fonts.css">
     <title>Advents-Challenge</title>
 </head>
-<body>
+<body onload="getIdAndCustomer(pathData='')">
     <header class="header_app">
         <div class="header_content">
             <img class="logo_elf" src="./img/icons8-weihnachten-96.png" alt="Santas Elf">
@@ -82,7 +82,7 @@
 
                 </div>
                 <div class="buttons_form_bottom">
-                    <div class="button_form" id="button_form_clear">
+                    <div onclick="clearNewCustomerForm()" class="button_form" id="button_form_clear">
                         <img src="./img/icons8-fegen-50 (1).png" alt="Icon Besen">
                     </div>
                     <button onclick="checkFormInput()" class="button_form" id="button_form_save" type="submit">
@@ -322,7 +322,9 @@
 
         </div>
     </div>
+    <script src="./js/firebase.js"></script>
     <script src="script.js"></script>
     <script src="./js/customer_form.js"></script>
+  
 </body>
 </html>
