@@ -9,14 +9,13 @@ function openNewCustomerForm() {
     resetErrorMessages();
 }
 
-function  resetErrorMessages() {
+function resetErrorMessages() {
     document.getElementById('customer_name_input_error').style.visibility = "hidden";
     document.getElementById('customer_age_input_error').style.visibility = "hidden"
     document.getElementById('customer_street_input_error').style.visibility = "hidden"
     document.getElementById('customer_streetNo_input_error').style.visibility = "hidden"
     document.getElementById('customer_areaCode_input_error').style.visibility = "hidden"
     document.getElementById('customer_city_input_error').style.visibility = "hidden"
-
 }
 
 function closeNewCustomerForm() {
@@ -30,7 +29,6 @@ function closeNewCustomerForm() {
 function openMenuMore(id, id2, e) {
     document.getElementById(id).style.display = "flex";
     document.getElementById(id2).style.display = "none";
-
 }
 
 function closeMenuMore(id, id2, e) {
